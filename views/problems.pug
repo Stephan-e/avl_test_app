@@ -1,0 +1,40 @@
+extends layout
+
+block layout-content
+  .main.container
+    div.Message 
+        h1='Questions'
+        br
+        a(href='/logout' method="get") LogOut
+        br
+        a='--'
+        h3= 'Filter'
+        form(action='/problem' method="get")
+          label(for='calculator') Calculator 
+            select(name='calculator', id='')
+                  each val in ['All', 'Calculator' , 'No Calculator']
+                      option=val
+          label(for='answer_type') Answer Type 
+            select(name='answer', id='')
+                  each val in ['All','Grid-In' , 'Multiple Choice' ]
+                      option=val
+          label(for='chart') Chart 
+            select(name='chart', id='')
+                  each val in ['All','Chart-In' , 'No Chart' ]
+                      option=val
+          label(for='length') Length 
+            select(name='length', id='')
+                  each val in ['All','Long' , 'Short']
+                      option=val
+          input(type='submit', value='Submit')
+        a='--'
+    div.Message
+      h1='Results'
+      each val, i in results
+        tr
+          td 
+            a(href='/problem/' + val.question_id) #{val.question_title} 
+            a #{val.question_text} - #{val.hashtags}
+            br
+      
+ 

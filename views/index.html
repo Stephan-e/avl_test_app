@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css" />
+  <script src="bundle.js"></script>
+</head>
+<body>
+ <div id="container">
+ <br/>
+    <h1>Questions App</h1>
+    <h3>Login</h1>
+    <div id="loading">Loading...</div>
+    <div id="redirecting" class="hidden">Redirecting...</div>
+    <div id="firebaseui-container"></div>
+  
+    <a href="https://dry-anchorage-08281.herokuapp.com/problem"> Problems List<a>
+    <a href="https://dry-anchorage-08281.herokuapp.com/problem/problem1"> Problem<a>
+    <a href="https://dry-anchorage-08281.herokuapp.com/user"> User View<a>
+    <br\>
+    <p>View user stats by going to /username found in user view</p>
+
+  </div>
+  <div class="container">  
+    <form id="contact" action="/sendemail" method="post">
+      <h3>Contact Form</h3>
+      <fieldset>
+        <input placeholder="Your name" type="text" tabindex="1" name="name" required autofocus >
+      </fieldset>
+      <fieldset>
+        <input placeholder="Your Email Address" type="email" tabindex="2" name="email" required>
+      </fieldset>
+      <fieldset>
+        <textarea placeholder="Type your message here...." tabindex="5" name="message" required></textarea>
+      </fieldset>
+      <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

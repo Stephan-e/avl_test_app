@@ -1,0 +1,18 @@
+extends layout
+
+block layout-content
+  title #{username} 
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+      div.container.ProblemView
+        h1.Banner #{username}
+        div.Message
+          div.Title
+            h1 Username: #{username}
+            h3 Email: #{email}
+            h3 Correct: #{correct}
+            h3 Complete: #{complete}
+            h3 Accuracy: #{accuracy}
+          a(href='/logout' method="get") LogOut      
+    
